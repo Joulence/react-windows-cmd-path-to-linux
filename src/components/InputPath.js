@@ -9,10 +9,10 @@ function InputPath() {
     event.preventDefault();
 
     if (linuxPath === "") {
-      setLinuxPath(windowsPath.replace(/\//g, "\\"));
+      setLinuxPath(windowsPath.replace(/\\/g, "/"));
     }
     if (windowsPath === "") {
-      setWindowsPath(linuxPath.replace(/\\/g, "/"));
+      setWindowsPath(linuxPath.replace(/\//g, "\\"));
     }
   };
 
